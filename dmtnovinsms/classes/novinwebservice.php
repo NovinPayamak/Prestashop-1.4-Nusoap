@@ -36,8 +36,8 @@ class NovinWebService
 				$result = $client->call('Send', array(
 													array(
 															'Auth' 	=> array('number' => $this->username,'pass' => $this->password),
-															'Recipients' => array($phonenumber),
-															'Message' => array($text),
+															'Recipients' => array('string' => array($phonenumber)),
+															'Message' => array('string' => array($text)),
 															'Flash' => false
 														)
 													)
